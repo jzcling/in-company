@@ -1,0 +1,10 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: hubbedin-cert
+spec:
+  domains:
+    - api.hubbedin.com
+    - candidate.hubbedin.com
+    - admin.hubbedin.com
+    - company.hubbedin.com

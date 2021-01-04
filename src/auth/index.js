@@ -142,11 +142,9 @@ export const useAuth0 = ({
                 this.user = await this.auth0Client.getUser();
                 if (this.user && !this.user[this.companyIdKey]) {
                     let user = await this.createCompanyUser(this.user);
-                    console.log(user);
                     this.user[this.idKey] = user.id;
                     this.user[this.companyIdKey] = user.jobCompanyId;
                     this.user[this.roleKey] = user.roles;
-                    console.log(this.user);
                 }
 
                 if (this.user) {
